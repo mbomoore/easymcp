@@ -1,0 +1,42 @@
+# easymcp configuration file
+# Configure your MCP servers and bundles
+
+servers:
+  # Example filesystem server
+  filesystem:
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-filesystem", "/tmp"]
+    env:
+      NODE_ENV: "production"
+    auto_start: false
+
+  # Example GitHub server
+  github:
+    command: "npx"
+    args: ["-y", "@modelcontextprotocol/server-github"]
+    env:
+      GITHUB_TOKEN: "your-github-token"
+    auto_start: false
+
+  # Example custom server
+  custom-server:
+    command: "python"
+    args: ["-m", "my_mcp_server"]
+    cwd: "/path/to/server"
+    env:
+      API_KEY: "your-api-key"
+    auto_start: false
+
+bundles:
+  # Development bundle
+  development:
+    servers:
+      - filesystem
+      - github
+    auto_start: false
+
+  # Production bundle
+  production:
+    servers:
+      - custom-server
+    auto_start: true

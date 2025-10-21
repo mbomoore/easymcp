@@ -1,0 +1,5 @@
+# Minimal easymcp configuration
+servers:
+  example:
+    command: "node"
+    args: ["server.js"]
