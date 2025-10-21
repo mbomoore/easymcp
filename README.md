@@ -38,6 +38,8 @@ cd easymcp
 pip install -e .
 ```
 
+For detailed installation instructions, see [INSTALLATION.md](docs/INSTALLATION.md).
+
 ## Quick Start
 
 1. **Initialize a configuration file:**
@@ -92,6 +94,8 @@ easymcp logs filesystem
 # Launch the TUI
 easymcp tui
 ```
+
+For more details, see the [Quick Start Guide](docs/QUICKSTART.md).
 
 ## Commands
 
@@ -164,6 +168,12 @@ easymcp export -o custom.json     # Export to custom path
 ### `easymcp tui`
 
 Launch the interactive Text User Interface for visual server management.
+
+## Auto-Start on Login
+
+easymcp supports automatic server startup when you log in. Configure servers or bundles with `auto_start: true` and set up platform-specific integration.
+
+For detailed setup instructions, see [AUTO_START.md](docs/AUTO_START.md).
 
 ## Configuration
 
@@ -315,6 +325,8 @@ pytest tests/
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ## License
 
